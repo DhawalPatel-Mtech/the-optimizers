@@ -1,7 +1,3 @@
 export default function All() {
-  return (
-    <div>
-      <h1>All</h1>
-    </div>
-  );
+  return <div>All</div>;
 }
