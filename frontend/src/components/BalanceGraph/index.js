@@ -848,7 +848,7 @@ export default function BalanceGraph() {
     <div className={styles.balanceGraph}>
       <div className={styles.balance}>
         <h3>Current Balance</h3>
-        <p>${totalBalence}</p>
+        <p>${Math.round(totalBalence)}</p>
       </div>
       <div className={styles.incomeExpense}>
         <div className={styles.income}>
