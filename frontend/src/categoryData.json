@@ -1,0 +1,106 @@
+[
+  {
+    "type": "expense",
+    "categoryName": "Apparel",
+    "categoryDescription": "Apparel expense",
+    "icon": "🧥",
+    "amount": "5944.44",
+    "date": "26/05/2023"
+  },
+  {
+    "type": "expense",
+    "categoryName": "Education",
+    "categoryDescription": "Education expense",
+    "icon": "📙",
+    "amount": "6273.28",
+    "date": "01/07/2022"
+  },
+  {
+    "type": "income",
+    "categoryName": "Petty cash",
+    "categoryDescription": "Petty cash income",
+    "icon": "💵",
+    "amount": "8234.34",
+    "date": "11/06/2022"
+  },
+  {
+    "type": "expense",
+    "categoryName": "Health",
+    "categoryDescription": "Health expense",
+    "icon": "🧘🏽‍♂️",
+    "amount": "5889.64",
+    "date": "12/02/2023"
+  },
+  {
+    "type": "expense",
+    "categoryName": "Culture",
+    "categoryDescription": "Culture expense",
+    "icon": "🖼",
+    "amount": "6496.49",
+    "date": "06/10/2023"
+  },
+  {
+    "type": "income",
+    "categoryName": "Bonus",
+    "categoryDescription": "Bonus income",
+    "icon": "🏅",
+    "amount": "2371.85",
+    "date": "27/01/2020"
+  },
+  {
+    "type": "income",
+    "categoryName": "Allowance",
+    "categoryDescription": "Allowance income",
+    "icon": "💰",
+    "amount": "3819.10",
+    "date": "28/02/2022"
+  },
+  {
+    "type": "income",
+    "categoryName": "Salary",
+    "categoryDescription": "Salary income",
+    "icon": "💼",
+    "amount": "9610.10",
+    "date": "27/07/2023"
+  },
+  {
+    "type": "expense",
+    "categoryName": "Food",
+    "categoryDescription": "Food expense",
+    "icon": "🍜",
+    "amount": "6180.28",
+    "date": "02/05/2022"
+  },
+  {
+    "type": "expense",
+    "categoryName": "Social Life",
+    "categoryDescription": "Social Life expense",
+    "icon": "👬🏼",
+    "amount": "10563.65",
+    "date": "04/07/2022"
+  },
+  {
+    "type": "expense",
+    "categoryName": "Beauty",
+    "categoryDescription": "Beauty expense",
+    "icon": "💄",
+    "amount": "6084.35",
+    "date": "19/07/2022"
+  },
+  {
+    "type": "expense",
+    "categoryName": "Gift",
+    "categoryDescription": "Gift expense",
+    "icon": "🎁",
+    "amount": "7203.71",
+    "date": "06/05/2020"
+  },
+  {
+    "type": "expense",
+    "categoryName": "Transport",
+    "categoryDescription": "Transport expense",
+    "icon": "🚕",
+    "amount": "2078.47",
+    "date": "10/04/2020"
+  }
+]
