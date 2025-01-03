@@ -833,7 +833,7 @@ export default function BalanceGraph() {
   const calculateCurrentBalance = (transactions) => {
     const totalIncome = calculateTotalIncome(transactions);
     const totalExpenses = calculateTotalExpenses(transactions);
-    return totalIncome - totalExpenses;
+    return totalExpenses - totalIncome;
   };
 
   const totalBalence = calculateCurrentBalance(data);
