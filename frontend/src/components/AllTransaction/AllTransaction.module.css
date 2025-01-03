@@ -1,7 +1,7 @@
 .tableContainer {
   padding: 20px;
   flex: 1;
-  max-width: 800px;
+  max-width: max-content;
   /* margin: auto; */
   height: max-content;
   background-color: #fff;
@@ -33,10 +33,11 @@
 }
 
 .table th {
-  background-color: #4caf50;
+  background-color: #8cd9aa;
   color: #fff;
   font-weight: bold;
   text-transform: uppercase;
+  border-radius: 6px;
 }
 
 .table tbody tr:hover {

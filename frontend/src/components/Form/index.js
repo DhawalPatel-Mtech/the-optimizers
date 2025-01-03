@@ -4,9 +4,11 @@ import styles from "./Form.module.css";
 
 export default function FormComponent({ onAddEntry }) {
   const [form, setForm] = useState({
-    expense: "",
-    income: "",
-    category: "",
+    type: "",
+    categoryName: "",
+    categoryDescription: "",
+    amount: "",
+    date: "",
   });
 
   const handleChange = (e) => {
@@ -16,53 +18,86 @@ export default function FormComponent({ onAddEntry }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (form.expense || form.income) {
+    if (form.amount && form.type && form.categoryName && form.date) {
       onAddEntry(form);
-      setForm({ expense: "", income: "", category: "" }); // Clear the form
+      setForm({
+        type: "",
+        categoryName: "",
+        categoryDescription: "",
+        amount: "",
+        date: "",
+      }); // Clear the form
     }
   };
 
   return (
     <form className={styles.form} onSubmit={handleSubmit}>
       <div className={styles.field}>
-        <label htmlFor="expense" className={styles.inputLabel}>
-          Expense
-        </label>
-        <input
-          type="number"
-          id="expense"
-          name="expense"
-          value={form.expense}
-          onChange={handleChange}
-          placeholder="Enter expense"
-          className={styles.inputField}
-        />
-      </div>
-      <div className={styles.field}>
-        <label htmlFor="income" className={styles.inputLabel}>
-          Income
-        </label>
-        <input
-          type="number"
-          id="income"
-          name="income"
-          value={form.income}
-          onChange={handleChange}
-          placeholder="Enter income"
-          className={styles.inputField}
-        />
-      </div>
-      <div className={styles.field}>
-        <label htmlFor="category" className={styles.inputLabel}>
-          Category
+        <label htmlFor="type" className={styles.inputLabel}>
+          Type
         </label>
         <input
           type="text"
-          id="category"
-          name="category"
-          value={form.category}
+          id="type"
+          name="type"
+          value={form.type}
           onChange={handleChange}
-          placeholder="Enter category"
+          placeholder="Enter type"
+          className={styles.inputField}
+        />
+      </div>
+      <div className={styles.field}>
+        <label htmlFor="categoryName" className={styles.inputLabel}>
+          Category Name
+        </label>
+        <input
+          type="text"
+          id="categoryName"
+          name="categoryName"
+          value={form.categoryName}
+          onChange={handleChange}
+          placeholder="Enter category name"
+          className={styles.inputField}
+        />
+      </div>
+      <div className={styles.field}>
+        <label htmlFor="categoryDescription" className={styles.inputLabel}>
+          Category Description
+        </label>
+        <input
+          type="text"
+          id="categoryDescription"
+          name="categoryDescription"
+          value={form.categoryDescription}
+          onChange={handleChange}
+          placeholder="Enter category description"
+          className={styles.inputField}
+        />
+      </div>
+      <div className={styles.field}>
+        <label htmlFor="amount" className={styles.inputLabel}>
+          Amount
+        </label>
+        <input
+          type="number"
+          id="amount"
+          name="amount"
+          value={form.amount}
+          onChange={handleChange}
+          placeholder="Enter amount"
+          className={styles.inputField}
+        />
+      </div>
+      <div className={styles.field}>
+        <label htmlFor="date" className={styles.inputLabel}>
+          Date
+        </label>
+        <input
+          type="date"
+          id="date"
+          name="date"
+          value={form.date}
+          onChange={handleChange}
           className={styles.inputField}
         />
       </div>

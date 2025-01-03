@@ -2,6 +2,7 @@
 import { useState } from "react";
 import FormComponent from "../../components/Form";
 import TableComponent from "../../components/AllTransaction";
+import { Form } from "@/components/ui/form";
 // import styles from "./TablePage.module.css";
 
 export default function TablePage() {
@@ -33,6 +34,7 @@ export default function TablePage() {
           padding: "40px",
         }}
       >
+        <Form />
         <FormComponent onAddEntry={handleAddEntry} />
         <TableComponent entries={entries} />
       </div>
