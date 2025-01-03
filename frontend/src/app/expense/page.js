@@ -14,13 +14,24 @@ export default function TablePage() {
 
   return (
     <div>
-      <h2>Expense Tracker</h2>
+      <h2
+        style={{
+          marginBottom: "30px",
+          textAlign: "center",
+          font: "bold",
+          fontSize: "30px",
+        }}
+      >
+        Expense Tracker
+      </h2>
       <div
         style={{
           display: "flex",
           height: "100vh",
           background: "#f2f2f2",
           width: "83vw",
+          gap: "100px",
+          padding: "40px",
         }}
       >
         <Form />
