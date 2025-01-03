@@ -18,11 +18,11 @@ export default function BalanceGraph() {
         <p>$10,000</p>
       </div>
       <div className={styles.incomeExpense}>
-        <div>
+        <div className={styles.income}>
           <h4>Income</h4>
           <p>$5,000</p>
         </div>
-        <div>
+        <div className={styles.expense}>
           <h4>Expense</h4>
           <p>$2,000</p>
         </div>

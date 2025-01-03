@@ -3,7 +3,7 @@ import Image from "next/image";
 import MainContent from "@/components/MainSection";
 export default function Home() {
   return (
-    <div style={{ display: "flex", height: "100vh" }}>
+    <div style={{ display: "flex", height: "100vh", background: "#f2f2f2" }}>
       <MainContent />
     </div>
   );
