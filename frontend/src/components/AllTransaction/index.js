@@ -13,9 +13,12 @@ export default function TableComponent({ entries }) {
               gap: "30px",
             }}
           >
-            <th>Expense</th>
-            <th>Income</th>
-            <th>Category</th>
+            <th>Type</th>
+            <th>Category Name</th>
+            <th>Category Description</th>
+            {/* <th>Icon</th> */}
+            <th>Amount</th>
+            <th>Date</th>
           </tr>
         </thead>
         <tbody>
@@ -28,9 +31,12 @@ export default function TableComponent({ entries }) {
                 gap: "30px",
               }}
             >
-              <td>{entry.expense || "-"}</td>
-              <td>{entry.income || "-"}</td>
-              <td>{entry.category || "-"}</td>
+              <td>{entry.type || "-"}</td>
+              <td>{entry.categoryName || "-"}</td>
+              <td>{entry.categoryDescription || "-"}</td>
+              <td>{entry.icon || "-"}</td>
+              <td>{entry.amount || "-"}</td>
+              <td>{entry.date || "-"}</td>
             </tr>
           ))}
         </tbody>
