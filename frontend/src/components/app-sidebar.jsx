@@ -1,4 +1,4 @@
-import { Calendar, Home, Inbox, Search, Settings } from "lucide-react";
+import { AArrowUp, Calendar, Home, Inbox, LayoutDashboardIcon, Search, Settings, Settings2 } from "lucide-react";
 
 import {
     Sidebar,
@@ -14,29 +14,29 @@ import {
 // Menu items.
 const items = [
   {
-    title: "Home",
-    url: "#",
-    icon: Home,
+    title: "Dashboard",
+    url: "/",
+    icon: LayoutDashboardIcon,
   },
   {
     title: "Transactions",
     url: "/transactions",
-    icon: Inbox,
+    icon: AArrowUp,
   },
-  {
-    title: "Income",
-    url: "/",
-    icon: Calendar,
-  },
-  {
-    title: "Expense",
-    url: "/", 
-    icon: Search,
-  },
+  // {
+  //   title: "Income",
+  //   url: "/",
+  //   icon: Calendar,
+  // },
+  // {
+  //   title: "Expense",
+  //   url: "/", 
+  //   icon: Search,
+  // },
   {
     title: "Categories",
-    url: "/",
-    icon: Settings,
+    url: "/categories",
+    icon: Settings2,
   },
 ];
 
