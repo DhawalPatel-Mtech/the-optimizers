@@ -1,4 +1,6 @@
+import TransactionCard from "../TransactionCard";
 import styles from "./Transaction.module.css";
+import data from "../../data.json";
 
 export default function Transactions() {
   return (
@@ -7,18 +9,18 @@ export default function Transactions() {
         <h3>Current Transactions</h3>
       </div>
       <div className={styles.transactionList}>
-        <div className={styles.transactionItem}>
-          <span className={styles.transactionLabel}>Transaction 1:</span>
-          <span className={styles.transactionValue}>$100</span>
-        </div>
-        <div className={styles.transactionItem}>
-          <span className={styles.transactionLabel}>Transaction 2:</span>
-          <span className={styles.transactionValue}>$200</span>
-        </div>
-        <div className={styles.transactionItem}>
-          <span className={styles.transactionLabel}>Transaction 3:</span>
-          <span className={styles.transactionValue}>$300</span>
-        </div>
+        {data?.map((transaction, index) => (
+          <div className={styles.transactionItem}>
+            <TransactionCard
+              type={transaction?.type}
+              categoryName={transaction?.categoryName}
+              categoryDesciption={transaction?.categoryDescription}
+              amount={transaction?.amount}
+              icon={transaction?.icon}
+              date={transaction?.date}
+            />
+          </div>
+        ))}
       </div>
     </div>
   );

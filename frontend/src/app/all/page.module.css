@@ -1,0 +1,48 @@
+.transactions {
+  width: 100%;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #fdfdfd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.transactionList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.transactionItem {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  font-size: 1rem;
+  color: #555;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.transactionItem:hover {
+  background-color: #e6f7ff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.transactionLabel {
+  font-weight: bold;
+}
+
+.transactionValue {
+  color: #007bff;
+  font-weight: bold;
+}
