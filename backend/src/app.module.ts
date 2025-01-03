@@ -3,7 +3,6 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { DatabaseModule } from './shared/database/database.module';
 import { UsersModule } from './modules/users/users.module';
-import { UsersService } from './modules/users/users.service';
 import { UsersController } from './modules/users/users.controller';
 import { AuthModule } from './modules/auth/auth.module';
 

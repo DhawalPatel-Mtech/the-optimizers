@@ -9,9 +9,7 @@ import { ConfigModule } from '@nestjs/config';
 
 @Module({
   imports: [
-    UsersModule,
-    DatabaseModule,
-    ConfigModule.forRoot(), // Ensure configuration is loaded
+    ConfigModule.forRoot(),
     JwtModule.register({
       global: true,
       privateKey: Buffer.from(process.env.JWT_PRIVATE_KEY, 'base64').toString(
@@ -25,6 +23,8 @@ import { ConfigModule } from '@nestjs/config';
         expiresIn: process.env.JWT_TOKEN_EXPIRY_TIME,
       },
     }),
+    UsersModule,
+    DatabaseModule,
   ],
   controllers: [AuthController],
   providers: [AuthService, JwtStrategy],
