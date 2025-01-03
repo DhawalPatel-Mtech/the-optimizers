@@ -44,7 +44,7 @@ export class TranscationService {
       where: { userId, type },
       _sum: { amount: true },
     });
-    return result._sum.amount || 0;
+    return { total: result._sum.amount || 0 };
   }
 
   async getTotalByCategory(userId: string) {
@@ -54,6 +54,7 @@ export class TranscationService {
       _sum: { amount: true },
       _count: true,
     });
+    console.log('Data: ', groupedTransactions);
 
     // Enrich with category descriptions
     const categoryDetails = await Promise.all(
