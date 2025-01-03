@@ -1,7 +1,9 @@
 .tableContainer {
   padding: 20px;
+  flex: 1;
   max-width: 800px;
-  margin: auto;
+  /* margin: auto; */
+  height: max-content;
   background-color: #fff;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
