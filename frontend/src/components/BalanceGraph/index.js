@@ -848,16 +848,16 @@ export default function BalanceGraph() {
     <div className={styles.balanceGraph}>
       <div className={styles.balance}>
         <h3>Current Balance</h3>
-        <p>${Math.round(totalBalence)}</p>
+        <p>₹{Math.round(totalBalence)}</p>
       </div>
       <div className={styles.incomeExpense}>
         <div className={styles.income}>
           <h4>Income</h4>
-          <p>${totalIncome}</p>
+          <p>₹{totalIncome}</p>
         </div>
         <div className={styles.expense}>
           <h4>Expense</h4>
-          <p>${totalExpense}</p>
+          <p>₹{totalExpense}</p>
         </div>
       </div>
       <div className={styles.graph}>
