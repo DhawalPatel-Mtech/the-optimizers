@@ -866,7 +866,10 @@ export default function BalanceGraph() {
           <h1>Income vs Expense</h1>
           <br />
           {/* Pass dynamic income and expense values to the IncomeExpenseDonutChart */}
-          <IncomeExpenseDonutChart income={income} expense={expense} />
+          <IncomeExpenseDonutChart
+            income={totalIncome}
+            expense={totalExpense}
+          />
         </div>
       </div>
     </div>
