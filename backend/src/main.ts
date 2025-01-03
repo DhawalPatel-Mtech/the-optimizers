@@ -23,6 +23,13 @@ async function bootstrap() {
     type: VersioningType.URI,
   });
 
+  app.enableCors({
+    origin: '*', // Frontend origin for local, stage & production
+    methods: 'GET,POST,PUT,DELETE,OPTIONS',
+    allowedHeaders: 'Content-Type, Authorization',
+    credentials: true,
+  });
+
   app
     .listen(port)
     .then(() => {

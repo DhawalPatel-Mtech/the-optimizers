@@ -20,6 +20,7 @@ export default function TablePage() {
           textAlign: "center",
           font: "bold",
           fontSize: "30px",
+          paddingTop: "20px",
         }}
       >
         Expense Tracker

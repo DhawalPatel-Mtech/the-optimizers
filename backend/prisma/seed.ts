@@ -1,4 +1,4 @@
-import { PrismaClient } from '@prisma/client';
+import { PrismaClient } from './client';
 
 enum CategoryType {
   INCOME = 'INCOME',
@@ -8,6 +8,16 @@ enum CategoryType {
 const prisma = new PrismaClient();
 
 async function main() {
+  const user = {
+    firstName: 'John',
+    lastName: 'Doe',
+    username: 'john123',
+    email: 'john.doe@example.com',
+    password: '$2b$10$fmQdtZcaWt/VezR5sRrjR.BzNSWAJr0ml/ZHYKmzJIKJp11G7HBkG',
+  };
+  await prisma.user.create({
+    data: user,
+  });
   const categories = [
     {
       iconName: '💰',

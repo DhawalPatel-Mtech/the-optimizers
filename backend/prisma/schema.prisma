@@ -1,6 +1,6 @@
 generator client {
   provider = "prisma-client-js"
-  output = "./client"
+  output   = "./client"
 }
 
 datasource db {
@@ -24,17 +24,35 @@ model User {
   @@map("users")
 }
 
-enum CategoryType { 
-  INCOME 
-  EXPENSE 
+enum CategoryType {
+  INCOME
+  EXPENSE
 }
 
 model Category {
-  id          String       @id @default(uuid())
-  iconName    String       @db.VarChar(50)
-  name        String       @db.VarChar(40)
-  description String       @db.VarChar(256)
+  id          String        @id @default(uuid())
+  iconName    String        @db.VarChar(50)
+  name        String        @db.VarChar(40)
+  description String        @db.VarChar(256)
   type        CategoryType
-  createdAt   DateTime     @default(now())
-  updatedAt   DateTime     @updatedAt
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+  Transaction Transaction[]
+}
+
+enum TransactionType {
+  INCOME
+  EXPENSE
+}
+
+model Transaction {
+  id         String   @id @default(uuid())
+  userId     String
+  categoryId String
+  amount     Float
+  date       DateTime
+  type       TransactionType
+  Category   Category @relation(fields: [categoryId], references: [id])
+
+  @@index([userId, type], map: "idx_user_type")
 }
