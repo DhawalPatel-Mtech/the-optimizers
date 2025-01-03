@@ -1,11 +1,13 @@
-import { AArrowUp, ArrowDown01, ArrowUp, ArrowUp01, ArrowUp01Icon, ArrowUp10, ArrowUpDown, Calendar, ChevronDown, Home, Inbox, LayoutDashboard, LayoutDashboardIcon, LucideSettings, Search, Settings, Settings2 } from "lucide-react";
+import { AArrowUp, ArrowDown01, ArrowUp, ArrowUp01, ArrowUp01Icon, ArrowUp10, ArrowUpDown, Calendar, ChevronDown, ChevronUp, DollarSign, Home, Inbox, LayoutDashboard, LayoutDashboardIcon, LogOut, LogOutIcon, LucideSettings, Search, Settings, Settings2, User2 } from "lucide-react";
 
 import {
     Sidebar,
     SidebarContent,
+    SidebarFooter,
     SidebarGroup,
     SidebarGroupContent,
     SidebarGroupLabel,
+    SidebarHeader,
     SidebarMenu,
     SidebarMenuButton,
     SidebarMenuItem,
@@ -15,6 +17,15 @@ import {
   CollapsibleContent,
   CollapsibleTrigger,
 } from "@/components/ui/collapsible"
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
+
 
 // Menu items.
 const items = [
@@ -48,19 +59,22 @@ const items = [
 export function AppSidebar() {
   return (
     <Sidebar>
-      <SidebarContent>
-        <SidebarGroup>
-          <SidebarGroupLabel>Expense Tracker</SidebarGroupLabel>
-          <SidebarGroupContent>
-            <SidebarMenu>
-                <SidebarMenuItem key={'Dashboard'}>
-                  <SidebarMenuButton asChild>
+       <SidebarHeader>
+          <SidebarMenu>
+            <SidebarMenuItem>
+                <SidebarMenuButton asChild>
                     <a href={'/'}>
-                        <LayoutDashboard className="transition-transform group-data-[state=open]/collapsible:rotate-180" />
-                      <span>{'Dashboard'}</span>
+                      <DollarSign className="transition-transform group-data-[state=open]/collapsible:rotate-180"/>
+                      <span style={{fontSize: '22px', fontWeight: 'bold'}}>{'Expense Tracker'}</span>
                     </a>
                   </SidebarMenuButton>
-                </SidebarMenuItem>
+            </SidebarMenuItem>
+          </SidebarMenu>
+        </SidebarHeader>
+      <SidebarContent>
+        <SidebarGroup>
+          <SidebarGroupContent>
+            <SidebarMenu>
               <Collapsible defaultOpen className="group/collapsible">
                 <SidebarGroup>
                   <SidebarGroupLabel asChild>
@@ -103,8 +117,7 @@ export function AppSidebar() {
               </Collapsible>
               <SidebarMenuItem key={'Categories'}>
                   <SidebarMenuButton asChild>
-                    <a href={'/'} style={{ alignSelf: "left"}}>
-                      {/* <item.icon /> */}
+                    <a href={'/Categories'}>
                       <LucideSettings className="transition-transform group-data-[state=open]/collapsible:rotate-180" />
                       <span>{'Categories'}</span>
                     </a>
@@ -114,6 +127,19 @@ export function AppSidebar() {
           </SidebarGroupContent>
         </SidebarGroup>
       </SidebarContent>
+       <SidebarFooter>
+          <SidebarMenu>
+            <SidebarMenuItem>
+                <SidebarMenuButton asChild>
+                    <a href={'/logout'}>
+                      {/* <item.icon /> */}
+                      <LogOutIcon className="transition-transform group-data-[state=open]/collapsible:rotate-180" />
+                      <span>{'Logout'}</span>
+                    </a>
+                  </SidebarMenuButton>
+            </SidebarMenuItem>
+          </SidebarMenu>
+        </SidebarFooter>
     </Sidebar>
   );
 }
