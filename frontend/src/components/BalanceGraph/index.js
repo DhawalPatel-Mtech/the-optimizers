@@ -31,14 +31,9 @@ export default function BalanceGraph() {
         <h4>Expense Graph</h4>
         <div>
           <h1>Income vs Expense</h1>
+          <br />
           {/* Pass dynamic income and expense values to the IncomeExpenseDonutChart */}
           <IncomeExpenseDonutChart income={income} expense={expense} />
-
-          {/* Buttons to increase income and expense */}
-          <div>
-            <button onClick={increaseIncome}>Increase Income</button>
-            <button onClick={increaseExpense}>Increase Expense</button>
-          </div>
         </div>
       </div>
     </div>
