@@ -9,6 +9,7 @@ const logger = new Logger('Main');
 async function bootstrap() {
   const port = process.env.PORT;
   const app = await NestFactory.create(AppModule);
+
   app.useGlobalPipes(
     new ValidationPipe({
       whitelist: true,
@@ -17,9 +18,11 @@ async function bootstrap() {
       stopAtFirstError: true, // Stops validation on the first error
     }),
   );
+
   app.enableVersioning({
     type: VersioningType.URI,
   });
+
   app
     .listen(port)
     .then(() => {
