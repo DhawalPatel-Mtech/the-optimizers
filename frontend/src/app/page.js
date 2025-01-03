@@ -1,10 +1,10 @@
 import Categories from "@/components/Categories";
 import Image from "next/image";
-
+import MainContent from "@/components/MainSection";
 export default function Home() {
   return (
-    <>
-      <Categories />
-    </>
+    <div style={{ display: "flex", height: "100vh" }}>
+      <MainContent />
+    </div>
   );
 }
