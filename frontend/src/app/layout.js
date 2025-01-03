@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
       >
         <SidebarProvider>
           <AppSidebar />
-          <main style={{ background: "#f2f2f2" }}>
+          <main style={{ background: "#f2f2f2", width: "100%" }}>
             <SidebarTrigger />
             {children}
           </main>
