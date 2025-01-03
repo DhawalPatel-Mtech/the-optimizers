@@ -1,0 +1,11 @@
+.main {
+  /* flex: 1; */
+  width: 83vw;
+  padding: 20px;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}

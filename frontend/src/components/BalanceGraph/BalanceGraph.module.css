@@ -1,0 +1,54 @@
+.balanceGraph {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  gap: 20px; /* Adds space between sections */
+  background-color: #f9f9f9; /* Optional background for the container */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.balance {
+  background-color: #e8f4f8; /* Light blue */
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.incomeExpense {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.income {
+  background-color: #e8fbe8; /* Light green */
+  flex: 1;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.expense {
+  background-color: #fbe8e8; /* Light red */
+  flex: 1;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.graph {
+  background-color: #f2f2f2; /* Light gray */
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  height: 200px; /* Example height for the graph */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
