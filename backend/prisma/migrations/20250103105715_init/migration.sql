@@ -1,3 +1,6 @@
+-- CreateEnum
+CREATE TYPE "CategoryType" AS ENUM ('INCOME', 'EXPENSE');
+
 -- CreateTable
 CREATE TABLE "users" (
     "id" TEXT NOT NULL,
@@ -12,6 +15,19 @@ CREATE TABLE "users" (
     "updatedAt" TIMESTAMP(3) NOT NULL,
 
     CONSTRAINT "users_pkey" PRIMARY KEY ("id")
+);
+
+-- CreateTable
+CREATE TABLE "Category" (
+    "id" TEXT NOT NULL,
+    "iconName" VARCHAR(50) NOT NULL,
+    "name" VARCHAR(40) NOT NULL,
+    "description" VARCHAR(256) NOT NULL,
+    "type" "CategoryType" NOT NULL,
+    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "updatedAt" TIMESTAMP(3) NOT NULL,
+
+    CONSTRAINT "Category_pkey" PRIMARY KEY ("id")
 );
 
 -- CreateIndex

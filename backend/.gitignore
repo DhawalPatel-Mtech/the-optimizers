@@ -56,7 +56,7 @@ pids
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
 
 # Prisma client (if using custom output directory)
-prisma/*/client/
+prisma/client/
 
 # Cache and temporary files
 prisma/migrations/.migration_lock
